@@ -1,0 +1,12 @@
+package vn.tuanla.clean_citrus.repository.jpa;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import vn.tuanla.clean_citrus.domain.entity.Users;
+
+import java.util.Optional;
+
+@Repository
+public interface UsersRepository extends JpaRepository<Users, Long> {
+    Optional<Users> findByUsername(String username);
+}
