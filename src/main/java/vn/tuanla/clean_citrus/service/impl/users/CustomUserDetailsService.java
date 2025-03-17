@@ -1,4 +1,4 @@
-package vn.tuanla.clean_citrus.service.users.impl;
+package vn.tuanla.clean_citrus.service.impl.users;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

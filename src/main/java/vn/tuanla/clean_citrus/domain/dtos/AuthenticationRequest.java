@@ -1,4 +1,4 @@
-package vn.tuanla.clean_citrus.domain.dto.response;
+package vn.tuanla.clean_citrus.domain.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthenticationResponse {
-    private String token;
-    private String refreshToken;
+public class AuthenticationRequest {
+    private String username;
+    private String password;
 }

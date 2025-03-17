@@ -1,4 +1,4 @@
-package vn.tuanla.clean_citrus.domain.dto.request;
+package vn.tuanla.clean_citrus.domain.dtos;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
