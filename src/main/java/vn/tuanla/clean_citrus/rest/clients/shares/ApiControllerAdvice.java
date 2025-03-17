@@ -33,9 +33,9 @@ import vn.tuanla.clean_citrus.common.utils.DataUtils;
 import vn.tuanla.clean_citrus.common.utils.ErrorManagementUtils;
 import vn.tuanla.clean_citrus.common.utils.ResponseFactory;
 import vn.tuanla.clean_citrus.common.utils.ResponseMessage;
-import vn.tuanla.clean_citrus.domain.dto.response.BadRequestResponse;
 import vn.tuanla.clean_citrus.exception.*;
-import vn.tuanla.clean_citrus.domain.dto.response.ValidationErrorResponse;
+import vn.tuanla.clean_citrus.rest.dto.response.BadRequestResponse;
+import vn.tuanla.clean_citrus.rest.dto.response.ValidationErrorResponse;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;

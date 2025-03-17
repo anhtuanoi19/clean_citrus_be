@@ -1,4 +1,4 @@
-package vn.tuanla.clean_citrus.domain.dto.response;
+package vn.tuanla.clean_citrus.rest.dto.response;
 
 public class BaseBadRequestResponse {
     protected String code;

@@ -8,7 +8,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import vn.tuanla.clean_citrus.common.utils.ErrorManagementUtils;
-import vn.tuanla.clean_citrus.domain.dto.response.BaseBadRequestResponse;
+import vn.tuanla.clean_citrus.rest.dto.response.BaseBadRequestResponse;
 
 import java.util.ArrayList;
 import java.util.List;

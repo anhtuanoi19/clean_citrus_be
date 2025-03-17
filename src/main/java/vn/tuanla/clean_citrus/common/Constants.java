@@ -1,6 +1,6 @@
 package vn.tuanla.clean_citrus.common;
 
-public class Constans {
+public class Constants {
     public static final String SUCCESS = "SUCCESS";
     public static final String CLIENT_API = "/client/api";
     public static final String LOGIN_URL = CLIENT_API + "/login";

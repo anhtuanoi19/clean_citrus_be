@@ -1,17 +1,14 @@
-package vn.tuanla.clean_citrus.security.auth;
+package vn.tuanla.clean_citrus.security;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Service;
-import vn.tuanla.clean_citrus.domain.dto.request.AuthenticationRequest;
-import vn.tuanla.clean_citrus.domain.dto.response.AuthenticationResponse;
-import vn.tuanla.clean_citrus.domain.entity.Permissions;
+import vn.tuanla.clean_citrus.domain.dtos.AuthenticationRequest;
 import vn.tuanla.clean_citrus.domain.entity.Users;
 import vn.tuanla.clean_citrus.repository.dao.permission.impl.PermissionCustomRepoImpl;
-import vn.tuanla.clean_citrus.repository.jpa.PermissionRepo;
 import vn.tuanla.clean_citrus.repository.jpa.UsersRepository;
-import vn.tuanla.clean_citrus.security.JwtTokenProvider;
+import vn.tuanla.clean_citrus.rest.dto.response.AuthenticationResponse;
 
 import java.util.*;
 

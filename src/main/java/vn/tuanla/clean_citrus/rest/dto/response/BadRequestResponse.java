@@ -1,4 +1,4 @@
-package vn.tuanla.clean_citrus.domain.dto.response;
+package vn.tuanla.clean_citrus.rest.dto.response;
 
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;

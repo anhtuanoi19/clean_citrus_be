@@ -1,13 +1,15 @@
-package vn.tuanla.clean_citrus.service.users.impl;
+package vn.tuanla.clean_citrus.service.impl.users;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import vn.tuanla.clean_citrus.common.ConstantsErrorCode;
 import vn.tuanla.clean_citrus.domain.entity.Permissions;
 import vn.tuanla.clean_citrus.domain.entity.Users;
+import vn.tuanla.clean_citrus.exception.BusinessException;
 import vn.tuanla.clean_citrus.repository.jpa.PermissionRepo;
 import vn.tuanla.clean_citrus.repository.jpa.UsersRepository;
-import vn.tuanla.clean_citrus.service.UsersService;
+import vn.tuanla.clean_citrus.service.abs.users.UsersService;
 
 @Service
 public class UserServiceImpl implements UsersService {
@@ -38,5 +40,10 @@ public class UserServiceImpl implements UsersService {
         Users users = usersRepository.findByUsername(username).orElseThrow(()->new RuntimeException("User not found"));
         Permissions permissions = permissionsRepository.findByName(permission).orElseThrow(()->new RuntimeException("Permission not found"));
         users.getPermissions().add(permissions);
+    }
+
+    @Override
+    public Users findUserByUsername(String username) {
+        return usersRepository.findByUsername(username).orElseThrow(()->new BusinessException(ConstantsErrorCode.USERS_ERROR.USERS_ERROR_NOT_FOUND));
     }
 }

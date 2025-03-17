@@ -11,9 +11,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import vn.tuanla.clean_citrus.CleanCitrusBeApplication;
 import vn.tuanla.clean_citrus.common.ApiRequestInfo;
-import vn.tuanla.clean_citrus.common.Constans;
+import vn.tuanla.clean_citrus.common.Constants;
 import vn.tuanla.clean_citrus.common.DateUtil;
-import vn.tuanla.clean_citrus.domain.dto.request.ActionDetailDTO;
+import vn.tuanla.clean_citrus.domain.dtos.ActionDetailDTO;
 import vn.tuanla.clean_citrus.domain.entity.ActionAudit;
 import vn.tuanla.clean_citrus.domain.entity.ActionDetail;
 import vn.tuanla.clean_citrus.exception.ConstraintViolationExceptionCustom;
@@ -528,8 +528,8 @@ public class DataUtils {
                             if (DataUtils.isNullOrEmpty(processDetail.getOldDisplayValue())) {
                                 processDetail.setOldDisplayValue(processDetail.getOldValue());
                             }
-                            processDetail.setDeleted(Constans.DELETE.INACTIVE);
-                            processDetail.setStatus(Constans.STATUS.ACTIVE);
+                            processDetail.setDeleted(Constants.DELETE.INACTIVE);
+                            processDetail.setStatus(Constants.STATUS.ACTIVE);
                             result.add(processDetail);
                         }
                     }
@@ -667,8 +667,8 @@ public class DataUtils {
         actionAudit.setActionCode(actionCode);
         actionAudit.setTableName(tableName);
         actionAudit.setActionDatetime(new Date());
-        actionAudit.setStatus(Constans.STATUS.ACTIVE);
-        actionAudit.setDeleted(Constans.DELETE.INACTIVE);
+        actionAudit.setStatus(Constants.STATUS.ACTIVE);
+        actionAudit.setDeleted(Constants.DELETE.INACTIVE);
         actionAudit.setDescription(description);
         actionAudit.setObjectParentId(objectParentId == null ? objectId : objectParentId);
         return actionAudit;
