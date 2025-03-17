@@ -1,4 +1,4 @@
-package vn.tuanla.clean_citrus.service;
+package vn.tuanla.clean_citrus.service.users.impl;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -7,6 +7,7 @@ import vn.tuanla.clean_citrus.domain.entity.Permissions;
 import vn.tuanla.clean_citrus.domain.entity.Users;
 import vn.tuanla.clean_citrus.repository.jpa.PermissionRepo;
 import vn.tuanla.clean_citrus.repository.jpa.UsersRepository;
+import vn.tuanla.clean_citrus.service.UsersService;
 
 @Service
 public class UserServiceImpl implements UsersService {
