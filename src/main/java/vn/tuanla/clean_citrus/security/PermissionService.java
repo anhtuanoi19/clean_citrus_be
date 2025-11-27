@@ -13,7 +13,6 @@ public class PermissionService {
     public PermissionService(PermissionRepo permissionRepository) {
         this.permissionRepository = permissionRepository;
     }
-
     public String getPermissionForUser(String role) {
         Permissions permission = permissionRepository.findByName(role)
                 .orElseThrow(() -> new RuntimeException("Permission not found for role "));
